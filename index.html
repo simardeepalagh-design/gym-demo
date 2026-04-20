@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRUX | Defy Gravity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 1. NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">KRUX</a>
+      <ul class="nav-links">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <a href="#join" class="btn btn-outline">Join Now</a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero" id="home">
+    <video aria-hidden="true" class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/gym-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">WELCOME TO THE FUTURE OF FITNESS</p>
+      <h1 class="hero-title">
+        <span class="overflow-hidden"><span class="word">DEFY</span></span>
+        <br>
+        <span class="overflow-hidden"><span class="word">GRAVITY</span></span>
+      </h1>
+      <p class="hero-subtext">Elite training. Zero limits.</p>
+      <div class="hero-actions">
+        <a href="#join" class="btn btn-primary">START YOUR JOURNEY</a>
+        <a href="#story" class="hero-link">Watch our story &darr;</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="arrow-down"></div>
+    </div>
+  </section>
+
+  <!-- 3. MARQUEE STRIP -->
+  <div class="marquee-section">
+    <div class="marquee-content">
+      <span>STRENGTH &bull; ENDURANCE &bull; SPEED &bull; POWER &bull; AGILITY &bull; PERFORMANCE &bull;&nbsp;</span>
+      <span>STRENGTH &bull; ENDURANCE &bull; SPEED &bull; POWER &bull; AGILITY &bull; PERFORMANCE &bull;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- 4. STATS SECTION -->
+  <section class="stats section">
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-num-wrapper">
+          <h3 class="stat-number" data-target="500">0</h3><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Members</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num-wrapper">
+          <h3 class="stat-number" data-target="12">0</h3>
+        </div>
+        <p class="stat-label">Expert Trainers</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num-wrapper">
+          <h3 class="stat-number" data-target="20">0</h3><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Classes/Week</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num-wrapper">
+          <h3 class="stat-number" data-target="5">0</h3><span class="stat-suffix"></span>
+        </div>
+        <p class="stat-label">Star Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROGRAMS SECTION -->
+  <section class="programs section" id="programs">
+    <div class="section-header container">
+      <p class="section-label">PROGRAMS</p>
+      <h2 class="section-title">TRAIN LIKE A BEAST</h2>
+    </div>
+    <div class="programs-grid container">
+      <div class="program-card">
+        <div class="program-icon">🏋️</div>
+        <h3 class="program-title">Strength & Conditioning</h3>
+        <p class="program-desc">Build raw power and build muscle with our elite strength protocols.</p>
+        <a href="#" class="program-link">EXPLORE &rarr;</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🔥</div>
+        <h3 class="program-title">HIIT & Cardio</h3>
+        <p class="program-desc">Burn fat and increase endurance with high-intensity interval training.</p>
+        <a href="#" class="program-link">EXPLORE &rarr;</a>
+      </div>
+      <div class="program-card" id="classes">
+        <div class="program-icon">🤸</div>
+        <h3 class="program-title">KRUX Yoga</h3>
+        <p class="program-desc">Defy gravity, master your bodyweight, and improve your flexibility and core.</p>
+        <a href="#" class="program-link">EXPLORE &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SCROLL-ZOOM VIDEO SECTION -->
+  <section class="scroll-zoom-section" id="story">
+    <div class="scroll-zoom-sticky">
+      <h2 class="zoom-title">SEE WHAT WE'RE MADE OF</h2>
+      <div class="zoom-video-container">
+        <video aria-hidden="true" class="zoom-video" autoplay muted loop playsinline>
+          <source src="assets/gym-video-2.mp4" type="video/mp4">
+        </video>
+        <div class="zoom-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TRAINERS SECTION -->
+  <section class="trainers section" id="trainers">
+    <div class="section-header container">
+      <p class="section-label">TEAM</p>
+      <h2 class="section-title">MEET THE EXPERTS</h2>
+    </div>
+    <div class="trainers-grid container">
+      <div class="trainer-card">
+        <div class="trainer-img-wrap">
+          <img src="assets/male-1.png" alt="Marcus Rex" class="trainer-img">
+        </div>
+        <div class="trainer-info">
+          <h3 class="trainer-name">MARCUS REX</h3>
+          <p class="trainer-specialty">Head of Strength</p>
+          <div class="trainer-social">
+            <a href="#">IG</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <div class="trainer-img-wrap">
+          <img src="assets/female-3.png" alt="Sarah Vance" class="trainer-img">
+        </div>
+        <div class="trainer-info">
+          <h3 class="trainer-name">SARAH VANCE</h3>
+          <p class="trainer-specialty">HIIT Specialist</p>
+          <div class="trainer-social">
+            <a href="#">IG</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <div class="trainer-img-wrap">
+          <img src="assets/male-2.png" alt="David Chen" class="trainer-img">
+        </div>
+        <div class="trainer-info">
+          <h3 class="trainer-name">DAVID CHEN</h3>
+          <p class="trainer-specialty">Mobility & Yoga</p>
+          <div class="trainer-social">
+            <a href="#">IG</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="section-header container">
+      <h2 class="section-title">REAL PEOPLE. REAL RESULTS.</h2>
+    </div>
+    <div class="testimonials-carousel">
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">KRUX completely changed my routine. The energy is infectious and unmatched.</p>
+        <div class="quote-author">
+          <div class="author-info">
+            <h4>JESSICA M.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">From the moment I stepped in, I knew this was different. Elite level trainers.</p>
+        <div class="quote-author">
+          <div class="author-info">
+            <h4>ALEX T.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">The KRUX class pushed my limits in ways I never thought possible.</p>
+        <div class="quote-author">
+          <div class="author-info">
+            <h4>RYAN P.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">I've dropped 20lbs and gained so much strength thanks to Marcus and his team.</p>
+        <div class="quote-author">
+          <div class="author-info">
+            <h4>EMILY C.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Best gym I've ever been to. Period. The vibe here forces you to level up completely.</p>
+        <div class="quote-author">
+          <div class="author-info">
+            <h4>JAKE R.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PRICING SECTION -->
+  <section class="pricing section" id="pricing">
+    <div class="section-header container text-center">
+      <h2 class="section-title" style="margin: 0 auto;">CHOOSE YOUR ARSENAL</h2>
+    </div>
+    <div class="pricing-grid container">
+      <div class="pricing-card">
+        <h3 class="tier-name">BASIC</h3>
+        <div class="price">$49<span class="period">/mo</span></div>
+        <ul class="features">
+          <li>✔ Access to gym floor</li>
+          <li>✔ Basic equipment</li>
+          <li>✔ Locker room access</li>
+          <li class="disabled">✖ Group classes</li>
+          <li class="disabled">✖ Personal training</li>
+        </ul>
+        <a href="#" class="btn btn-outline full-width">SELECT PLAN</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <h3 class="tier-name">ELITE</h3>
+        <div class="price">$99<span class="period">/mo</span></div>
+        <ul class="features">
+          <li>✔ Access to gym floor</li>
+          <li>✔ All group classes</li>
+          <li>✔ Recovery zone access</li>
+          <li>✔ 1 Personal training/mo</li>
+          <li class="disabled">✖ Nutrition plan</li>
+        </ul>
+        <a href="#" class="btn btn-primary full-width">SELECT PLAN</a>
+      </div>
+      <div class="pricing-card">
+        <h3 class="tier-name">PRO</h3>
+        <div class="price">$149<span class="period">/mo</span></div>
+        <ul class="features">
+          <li>✔ Access to gym floor</li>
+          <li>✔ Unlimited group classes</li>
+          <li>✔ Unlimited recovery zone</li>
+          <li>✔ Weekly personal training</li>
+          <li>✔ Custom nutrition plan</li>
+        </ul>
+        <a href="#" class="btn btn-outline full-width">SELECT PLAN</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA BANNER -->
+  <section class="cta-banner" id="join">
+    <canvas id="cta-canvas"></canvas>
+    <div class="cta-content">
+      <h2 class="cta-title">READY TO DEFY YOUR LIMITS?</h2>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-primary">JOIN THE CULT</a>
+        <a href="#" class="btn btn-outline">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <h2 class="footer-logo">KRUX</h2>
+        <p class="footer-slogan">Push past your boundaries. Elevate your potential.</p>
+        <div class="social-links">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>EXPLORE</h4>
+          <a href="#programs">Programs</a>
+          <a href="#trainers">Trainers</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#story">Our Story</a>
+        </div>
+        <div class="link-group">
+          <h4>SUPPORT</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 KRUX. Built for champions.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
