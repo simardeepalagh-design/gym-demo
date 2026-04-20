@@ -1,4 +1,77 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- EFFECT 1: GLOBAL NEON PARTICLE CURSOR ---
+  const cursorCanvas = document.getElementById("cursor-canvas");
+  const cctx = cursorCanvas.getContext("2d", { alpha: true });
+  let cWidth = window.innerWidth;
+  let cHeight = window.innerHeight;
+  cursorCanvas.width = cWidth;
+  cursorCanvas.height = cHeight;
+
+  window.addEventListener("resize", () => {
+    cWidth = window.innerWidth;
+    cHeight = window.innerHeight;
+    cursorCanvas.width = cWidth;
+    cursorCanvas.height = cHeight;
+  });
+
+  const cursorParticles = [];
+  let mouseX = cWidth / 2;
+  let mouseY = cHeight / 2;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Add particle on mousemove
+    for(let i=0; i<2; i++) {
+      cursorParticles.push({
+        x: mouseX,
+        y: mouseY,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: 1,
+        color: `hsl(70, 100%, ${50 + Math.random()*20}%)` // primary #E8FF00 range
+      });
+    }
+  });
+
+  function animateCursor() {
+    cctx.clearRect(0, 0, cWidth, cHeight);
+    
+    for (let i = 0; i < cursorParticles.length; i++) {
+        let p = cursorParticles[i];
+        
+        cctx.beginPath();
+        cctx.arc(p.x, p.y, p.life * 4, 0, Math.PI * 2);
+        cctx.fillStyle = p.color;
+        cctx.globalAlpha = p.life;
+        cctx.fill();
+        
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= 0.04;
+    }
+    
+    // Draw the core glowing dot at actual cursor
+    cctx.beginPath();
+    cctx.arc(mouseX, mouseY, 3, 0, Math.PI * 2);
+    cctx.fillStyle = "#E8FF00";
+    cctx.globalAlpha = 1;
+    cctx.shadowBlur = 10;
+    cctx.shadowColor = "#E8FF00";
+    cctx.fill();
+    cctx.shadowBlur = 0; // reset
+
+    // Remove dead particles
+    while(cursorParticles.length > 0 && cursorParticles[0].life <= 0) {
+        cursorParticles.shift();
+    }
+    
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  // ---------------------------------------------
+
   // Force autoplay for videos if blocked by browser policies (especially Safari)
   const videos = document.querySelectorAll("video");
   videos.forEach(video => {
